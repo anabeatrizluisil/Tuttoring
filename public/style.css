@@ -50,7 +50,7 @@ header {
     max-width: 80rem;
     min-height: 40rem;
 
-    margin: 4rem auto;
+    margin: 6rem auto;
 
     display: grid;
     grid-template-columns: 40% 60%;
@@ -58,6 +58,20 @@ header {
     border-radius: 4rem;
 
     box-shadow: 30px 30px var(--secodary-color);
+
+    animation-name: up;
+    animation-duration: 1s;
+    animation-direction: ease;
+}
+
+@keyframes up {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .details  {

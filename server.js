@@ -20,6 +20,14 @@ server.listen(5000, function() {
 })
 
 // rendering a page
-server.get('/', function(req, res) {
-    res.render("index");
+server.get('/teachers', function(req, res) {
+    return res.render("teachers/index");
+})
+
+server.post('/teachers', function(req,res) {
+    return res.send('Teste');
+})
+
+server.get('/teachers/create', function(req, res) {
+    return res.render("teachers/create");
 })
