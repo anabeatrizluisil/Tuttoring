@@ -1,5 +1,6 @@
 const express = require('express');
 const nunjucks = require('nunjucks');
+const routes = require('./routes');
 const server = express();
 
 // setting njk as view engine
@@ -12,22 +13,13 @@ nunjucks.configure("views", {
     noCache: true
 });
 
+// habilita o req body
+server.use(express.urlencoded({extended: true}))
 server.use(express.static('public'));
+server.use(routes);
 
 // activating server
 server.listen(5000, function() {
     console.log('server is running!');
 })
 
-// rendering a page
-server.get('/teachers', function(req, res) {
-    return res.render("teachers/index");
-})
-
-server.post('/teachers', function(req,res) {
-    return res.send('Teste');
-})
-
-server.get('/teachers/create', function(req, res) {
-    return res.render("teachers/create");
-})

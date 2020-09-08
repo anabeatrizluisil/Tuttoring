@@ -3,7 +3,8 @@
     padding: 0;
     box-sizing: border-box;
     --primary-color: #1983c9;
-    --secodary-color: #51a2d8
+    --secodary-color: #51a2d8;
+    --orange-color: #f7d71E;
 }
 
 html {
@@ -12,7 +13,9 @@ html {
 }
 
 body {
-    background-color: var(--primary-color);
+    background: rgb(25,131,201);
+    background: linear-gradient(90deg, rgba(25,131,201,1) 0%, rgba(230,228,237,1) 100%);     
+    
 }
 
 header {
@@ -55,9 +58,7 @@ header {
     display: grid;
     grid-template-columns: 40% 60%;
 
-    border-radius: 4rem;
-
-    box-shadow: 30px 30px var(--secodary-color);
+    box-shadow: 2px 2px 2px  var(--secodary-color);
 
     animation-name: up;
     animation-duration: 1s;
@@ -106,6 +107,53 @@ header {
     font-size: 1.2rem; 
 }
 
+.details .item span {
+    padding: 0.8rem 1.6rem;
+    background-color:var(--orange-color);
+    border-radius: 1.6rem;
+    margin-right: 0.4rem;
+
+    display: inline-block;
+}
+
 .details .item:last-child {
     border: none;
+}
+
+/* ------ FORM  ------------- */
+input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 0.5rem 0; 
+    color: #555555;
+    font-weight: bold;
+}
+
+input[type="radio"] {
+    width: initial;
+    margin-right: 0.4rem;
+}
+
+input::placeholder {
+    font-size: 1.4rem;
+    font-weight: normal;
+}
+
+button[type="submit"] {
+    background-color: var(--primary-color);
+    width: 100%;
+    border: none;
+    color: white;
+
+    padding: 0.8rem 3.2rem;
+    border-radius: 0.4rem;
+    margin-top: 3.2rem;
+    font-size: 1.6rem;
+}
+
+@media (max-width: 375px ) {
+    .card {
+        width: 70%;
+    }
 }
