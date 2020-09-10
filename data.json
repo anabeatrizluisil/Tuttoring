@@ -1,0 +1,14 @@
+{
+  "teachers": [
+    {
+      "id": 1,
+      "avatar_url": "http://google.com",
+      "name": "Ana",
+      "birth": 844646400000,
+      "select": "em_completo",
+      "type": "distancia",
+      "field": "Matemática",
+      "created_at": 1599751416312
+    }
+  ]
+}
