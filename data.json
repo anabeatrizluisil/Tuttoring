@@ -5,10 +5,10 @@
       "avatar_url": "http://google.com",
       "name": "Ana",
       "birth": 844646400000,
-      "select": "em_completo",
-      "type": "distancia",
+      "select": "mestrado",
+      "type": "À distância",
       "field": "Matemática",
-      "created_at": 1599751416312
+      "created_at": 1599961038019
     }
   ]
 }
