@@ -17,6 +17,9 @@ routes.get('/teachers/create', function(req, res) {
 
 routes.post('/teachers', teachers.post);
 routes.get('/teachers/:id', teachers.show);
+routes.delete('/teachers', teachers.delete);
 routes.get('/teachers/:id/edit', teachers.edit);
+routes.put('/teachers', teachers.put);
+
 
 module.exports = routes
