@@ -3,6 +3,11 @@ const data = require('./data.json');
 const Intl = require('intl');
 const { age, gradutation, date } = require('./utils');
 
+// form
+exports.create = function(req, res) {
+    return res.render("teachers/create");
+}
+
 // create teacher
 exports.post = function(req,res) {
     // returns object properties (ex: avatar_url, name) in an array
