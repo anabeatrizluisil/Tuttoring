@@ -2,48 +2,53 @@
                     <div class="item">
                         <div>Avatar URL</div>
                         <div>
-                            <input type="url" name="avatar_url" placeholder="http://" value="{{ teacher.avatar_url }}">
+                            <input type="url" name="avatar_url" placeholder="http://" value="{{ student.avatar_url }}">
                         </div>
                     </div>
 
                     <div class="item">
                         <div>Nome Completo</div>
                         <div>
-                            <input type="text" name="name" placeholder="Nome completo" value="{{ teacher.name }}">
+                            <input type="text" name="name" placeholder="Nome completo" value="{{ student.name }}">
                         </div>
                     </div>
 
                     <div class="item">
                         <div>Data de nascimento</div>
                         <div>
-                            <input type="date" name="birth" value="{{ teacher.birth }}">
+                            <input type="date" name="birth" value="{{ student.birth }}">
                         </div>
                     </div>
 
                     <div class="item">
-                        <div>Grau de escolaridade</div>
+                        <div>Email</div>
                         <div>
-                            <select name="select">
-                                <option value="Ensino Médio" {% if teacher.select == "Ensino Médio"%} checked {% endif %}>Ensino Médio Completo</option>
-                                <option value="Ensino Superior" {% if teacher.select == "Ensino Superior"%} checked {% endif %}>Ensino Superior Completo</option>
-                                <option value="mestrado" {% if teacher.select == "mestrado"%} checked {% endif %}>Mestrado</option>
-                                <option value="doutorado" {% if teacher.select == "doutorado"%} checked {% endif %}>Doutorado</option>
+                            <input type="email" name="email" value="{{ student.email }}">
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div>Ano Escolar</div>
+                        <div>
+                            <select name="school_year">
+                                <option value="5EF">5º ano Ensino Fundamental</option>
+                                <option value="6EF">6º ano Ensino Fundamental</option>
+                                <option value="7EF">7º ano Ensino Fundamental</option>
+                                <option value="8EF">8º ano Ensino Fundamental</option>
+                                <option value="9EF">9º ano Ensino Fundamental</option>
+                                <option value="1EM">1º ano Ensino Médio</option>
+                                <option value="2EM">2º ano Ensino Médio</option>
+                                <option value="3EM">3º ano Ensino Médio</option>
+                                
                             </select>
                         </div>
                     </div>
 
+                
                     <div class="item">
-                        <div>Tipo de Aula</div>
+                        <div>Carga horária semanal</div>
                         <div>
-                            <span><input type="radio" name="type" value="Presencial" {% if teacher.type === "Presencial"%} checked {% endif %}>Presencial</span>
-                            <span><input type="radio" name="type" value="À distância" {% if teacher.type === "À distância"%} checked {% endif %}>À distância </span>                
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div>Área de atuação</div>
-                        <div>
-                            <input type="text" name="field" placeholder="Digite a área de atuação separado por vírgula" value="{{teacher.field}}">
+                            <input type="number" name="workload" placeholder="Quantidade de horas de aula por semana" value="{{ student.workload}}">
                         </div>
                     </div>
                     <button type="submit">Salvar</button>
