@@ -1,7 +1,7 @@
 const fs = require('fs');
-const data = require('./data.json');
+const data = require('../data.json');
 const Intl = require('intl');
-const { age, gradutation, date } = require('./utils');
+const { age, gradutation, date } = require('../utils');
 
 // form
 exports.create = function(req, res) {

@@ -225,6 +225,11 @@ tbody tr td:first-child span {
     border: 2px solid white;
 }
 
+/* ----- active logic ------ */
+.active {
+    font-weight: bold;
+}
+
 @media (max-width: 375px ) {
     .card {
         width: 70%;
