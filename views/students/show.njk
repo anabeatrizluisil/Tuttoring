@@ -1,45 +1,39 @@
 {% extends "layout.njk"%}
     {% block content %}
         <div class="card">
-                <div class="avatar" style="background: url({{teacher.avatar_url}}) no-repeat center center / cover"></div>
+                <div class="avatar" style="background: url({{student.avatar_url}}) no-repeat center center / cover"></div>
                 <div class="details">
                     <h3>DETALHES</h3>
 
                     <div class="item">
                         <div>Nome completo</div>
-                        <div>{{ teacher.name }}</div>
+                        <div>{{ student.name }}</div>
                     </div>
 
                     <div class="item">
                         <div>Idade</div>
-                        <div>{{ teacher.age }}</div>
+                        <div>{{ student.birth }}</div>
                     </div>
 
                     <div class="item">
-                        <div>Grau de escolaridade</div>
-                        <div>{{ teacher.select }}</div>
+                        <div>Email</div>
+                        <div>{{ student.email }}</div>
                     </div>
 
                     <div class="item">
-                        <div>Tipo de aula</div>
-                        <div><span>{{ teacher.type }}</span></div>
+                        <div>Ano Escolar</div>
+                        <div><span>{{ student.school_year }}</span></div>
                     </div>
 
                     <div class="item">
-                        <div>Acompanhamento</div>
+                        <div>Carga horária semanal</div>
                         <div>
-                            {% for acompanhamento in teacher.field %}
-                                <span>{{ acompanhamento }}</span>
-                            {% endfor %}
+                            <span>{{ student.workload }}</span>
                         </div>
                     </div>
 
-                    <div class="item">
-                        <div>Desde</div>
-                        <div>{{ teacher.created_at }}</div>
-                    </div>
                     
-                    <a href="/teachers/{{ teacher.id }}/edit" class="button">Editar</a>
+                    <a href="/students/{{ student.id }}/edit" class="button">Editar</a>
                 </div>
         </div>     
     {% endblock %}

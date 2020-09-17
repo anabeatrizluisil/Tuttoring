@@ -19,12 +19,14 @@ exports.post = function(req,res) {
         }
     }
 
-    let { avatar_url, name, birth, select, type, field} = req.body;
+    let { avatar_url, name, birth, email, school_year, workload } = req.body;
 
-    // creates a new key called created_at
-    const created_at = Date.now();
-    // creates a new key called id
-    const id = Number(data.students.length + 1);
+    let id = 1;
+    const lastStudent = data.students[data.students.length - 1];
+
+    if (lastStudent) {
+        id = lastStudent.id + 1;
+    }
     // changes the date to ms since 1970
     birth = Date.parse(birth);
 
@@ -36,10 +38,10 @@ exports.post = function(req,res) {
         avatar_url, 
         name, 
         birth, 
-        select, 
-        type, 
-        field, 
-        created_at});
+        email, 
+        school_year, 
+        workload
+    });
 
     fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err) {
         if (err) return res.send('Write file error!');
