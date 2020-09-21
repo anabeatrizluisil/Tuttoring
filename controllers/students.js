@@ -1,7 +1,7 @@
 const fs = require('fs');
 const data = require('../data.json');
 const Intl = require('intl');
-const { age, gradutation, date } = require('../utils');
+const { age, gradutation, date, grade } = require('../utils');
 
 // form
 exports.create = function(req, res) {
@@ -63,7 +63,8 @@ exports.show = function(req, res) {
 
     const student = {
         ...foundStudent,
-        age: age(foundStudent.birth)
+        birth: date(foundStudent.birth).birthDay,
+        school_year: grade(foundStudent.school_year)
     }
 
     return res.render('students/show', { student: student });
@@ -81,7 +82,7 @@ exports.edit = function(req, res) {
 
     const student = {
         ...foundStudent,
-        birth: date(foundStudent.birth)
+        birth: date(foundStudent.birth).iso
     }
 
     return res.render('students/edit', { student: student });

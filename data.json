@@ -2,9 +2,9 @@
   "students": [
     {
       "id": 1,
-      "avatar_url": "https://images.unsplash.com/photo-1514369118554-e20d93546b30?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
-      "name": "Lorena ",
-      "birth": 1360713600000,
+      "avatar_url": "https://images.unsplash.com/photo-1599687267812-35c05ff70ee9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+      "name": "Lorena",
+      "birth": 971136000000,
       "email": "lorena@gmail.com",
       "school_year": "5EF",
       "workload": "3"

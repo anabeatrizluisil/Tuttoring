@@ -122,7 +122,7 @@ header {
 }
 
 /* ------ FORM  ------------- */
-input {
+input, select {
     border: none;
     outline: none;
     width: 100%;
